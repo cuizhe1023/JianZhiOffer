@@ -91,8 +91,6 @@ public class ReplaceSpace {
                 str.setCharAt(indexNew--,str.charAt(indexOld));
             }
         }
-
-
         return str.toString();
     }
 
