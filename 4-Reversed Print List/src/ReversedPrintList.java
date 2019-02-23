@@ -1,5 +1,3 @@
-import com.sun.org.apache.bcel.internal.generic.IF_ACMPEQ;
-
 import java.util.ArrayList;
 import java.util.LinkedList;
 
@@ -9,8 +7,9 @@ import java.util.LinkedList;
  */
 public class ReversedPrintList {
 
-    /*
-    输入一个链表，按链表值从尾到头的顺序返回一个ArrayList。
+    /**
+     * 题目：
+     * 输入一个链表，按链表值从尾到头的顺序返回一个ArrayList。
      */
     static ArrayList<Integer> arrayList = new ArrayList<>();
     public static void main(String[] args) {
@@ -26,9 +25,12 @@ public class ReversedPrintList {
     }
 
     /**
-     * 通过栈实现链表的逆序输出
+     * 思路1：
+     * 通过栈实现链表的逆序输出。
+     * 每遍历一个结点，将这个结点的 val值 保存在栈中。
+     * 之后遍历栈，将栈顶元素依次放入 ArrayList 中。
      * @param listNode 目标链表
-     * @return
+     * @return 数组
      */
     public static ArrayList<Integer> printListFromTailToHead(ListNode listNode) {
         if (listNode==null){
@@ -48,7 +50,9 @@ public class ReversedPrintList {
     }
 
     /**
-     * 通过递归实现链表的逆序输出
+     * 思路2：
+     * 通过递归实现链表的逆序输出。
+     * 递归到最后一个结点后，将其 val值 依次放入 ArrayList 中。
      * @param listNode 链表
      * @return
      */

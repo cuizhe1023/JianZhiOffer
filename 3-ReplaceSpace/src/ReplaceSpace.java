@@ -3,10 +3,10 @@
  * @Date: 2019/2/20 20:19
  */
 public class ReplaceSpace {
-    /*
-    题目:
-    请实现一个函数，将一个字符串中的每个空格替换成“%20”。
-    例如，当字符串为We Are Happy.则经过替换之后的字符串为We%20Are%20Happy。
+    /**
+     * 题目:
+     * 请实现一个函数，将一个字符串中的每个空格替换成“%20”。
+     * 例如，当字符串为We Are Happy.则经过替换之后的字符串为We%20Are%20Happy。
      */
     public static void main(String[] args) {
         StringBuffer stringBuffer = new StringBuffer();
@@ -15,7 +15,8 @@ public class ReplaceSpace {
     }
 
     /**
-     * 思路1：charAt() 方法，遍历字符串每个位置的字符，如果遇见字符串 " ",则替换为 "%20".
+     * 思路1：
+     * charAt() 方法，遍历字符串每个位置的字符，如果遇见字符串 " ",则替换为 "%20".
      * @param stringBuffer 字符串
      * @return 替换之后的字符串
      */
@@ -35,6 +36,7 @@ public class ReplaceSpace {
     }
 
     /**
+     * 思路2：
      * 可以从字符串的末尾开始复制和替换，先准备两个指针，indexOld 和 indexNew。
      * indexOld 指向原来字符串的末尾，而 indexNew 指向替换之后的字符串的末尾，
      *                      |W|e| |A|r|e| |H|a|p|p|y|\0| | | | |
