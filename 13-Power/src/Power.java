@@ -37,8 +37,34 @@ public class Power {
         }
     }
 
+    /**
+     * 还可以使用递归进行计算。有公式如下：
+     *     |--- a^(n/2)*a^(n/2) ，n为偶数
+     * a^n|
+     *   |--- a^((n-1)/2)*a^((n-1)/2)，n为奇数
+     * 我们用右移运算代替了除2，用与运算代替了取余运算判断是技术还是偶数。
+     *
+     * @param base 底数
+     * @param exponent 幂
+     * @return base 的 exponent 次方
+     */
+    public static double power1(double base,int exponent){
+        if (exponent==0){
+            return 1;
+        }
+        if (exponent==1){
+            return base;
+        }
+        double result = power1(base,exponent>>1);
+        result = result*result;
+        if ((exponent&1) == 1){
+            result = result*base;
+        }
+        return result;
+    }
+
     public static void main(String[] args) {
-        System.out.println(power(122,0));
+        System.out.println(power1(13,2));
     }
 
 }
