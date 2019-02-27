@@ -1,6 +1,8 @@
+package List;
+
 /**
  * @Author: cuizhe
- * @Date: 2019/2/20 21:34
+ * @Date: 2019/2/27 20:30
  */
 public class MyList {
     private ListNode head;
