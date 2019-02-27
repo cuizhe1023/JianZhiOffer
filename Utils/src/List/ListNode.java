@@ -5,10 +5,10 @@ package List;
  * @Date: 2019/2/27 20:30
  */
 public class ListNode {
-    int val;
-    ListNode next = null;
+    public int val;
+    public ListNode next = null;
 
-    ListNode(int val) {
+    public ListNode(int val) {
         this.val = val;
     }
 
