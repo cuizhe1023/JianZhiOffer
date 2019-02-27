@@ -113,8 +113,44 @@ public class Print1ToMaxOfDigits {
         System.out.println();
     }
 
+    /**
+     * 用数字排列的方法表示：如果我们在数字前面补 0 的话，就会发现 n 位所有十进制数其实就是 n 个从 0 到 9 的全排列。
+     * 也就是说，我们把数字的每一位都从 0 到 9 排列一遍，就得到了所有的十进制数。
+     * 全排列用递归很容易实现，数字的每一位都可能是 0-9 中的一个数，然后设置好下一位。
+     * 递归结束的条件是我们已经设置了数字的最后一位。
+     * 当然打印的时候，我们应该将前面的 0 补位去掉。
+     *
+     * @param n n 位数
+     */
+    private static void printToMaxOfDigits_2(int n) {
+        if (n<=0){
+            System.out.println("输入的n没有意义");
+            return ;
+        }
+        char[] number = new char[n];
+        for (char ch :
+                number) {
+            ch = '0';
+        }
+        for (int i = 0; i < 10; i++) {
+            number[0] = (char)('0'+i);
+            printToMaxOfNDigitsRecursively(number,n,0);
+        }
+    }
+
+    private static void printToMaxOfNDigitsRecursively(char[] number,int n,int index) {
+        if (index==n-1){
+            printNumber(number);
+            return;
+        }
+        for (int i = 0; i < 10; i++) {
+            number[index+1] = (char)('0'+i);
+            printToMaxOfNDigitsRecursively(number,n,index+1);
+        }
+    }
+
     public static void main(String[] args) {
-        printToMaxOfDigits(3);
+        printToMaxOfDigits_2(3);
     }
 
 }
