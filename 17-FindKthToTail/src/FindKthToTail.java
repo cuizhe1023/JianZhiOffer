@@ -70,7 +70,11 @@ public class FindKthToTail {
         ListNode end = head;
         //先让后面那个指针指向第 k 个位置
         for (int i = 1; i < k; i++) {
-            end = end.next;
+            if (end.next!=null){
+                end = end.next;
+            }else {
+                return null;
+            }
         }
         while (end.next!=null){
             pre = pre.next;
