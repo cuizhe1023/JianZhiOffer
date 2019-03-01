@@ -7,12 +7,41 @@ package BinaryTree;
 public class MyBinaryTree {
     public TreeNode root;
 
-    public void insert(TreeNode left,int data,TreeNode right){
-        TreeNode newNode = new TreeNode(data);
-        if (root==null){
-            root=newNode;
-        }else {
+    public TreeNode getRoot() {
+        return root;
+    }
 
+    public void setRoot(TreeNode root) {
+        this.root = root;
+    }
+
+    public void preOrderTraverse() {
+        if (root!=null){
+            preOrderTraverse(root);
+            System.out.println();
+        }
+    }
+
+    private void preOrderTraverse(TreeNode treeNode) {
+        if (treeNode!=null){
+            System.out.print(treeNode.val + " ");
+            preOrderTraverse(treeNode.left);
+            preOrderTraverse(treeNode.right);
+        }
+    }
+
+    public void inOrderTraverse(){
+        if (root!=null){
+            inOrderTraverse(root);
+            System.out.println();
+        }
+    }
+
+    private void inOrderTraverse(TreeNode treeNode) {
+        if (treeNode!=null){
+            inOrderTraverse(treeNode.left);
+            System.out.print(treeNode.val + " ");
+            inOrderTraverse(treeNode.right);
         }
     }
 
