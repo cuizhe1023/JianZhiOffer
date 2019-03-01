@@ -14,6 +14,9 @@ public class HashSubtree {
 
     /**
      * 思路：
+     * 先对根节点进行比较，如果根节点一样，比较左子树，再比较右子树。
+     * 当比较的结点不一样时，将 root1 的左结点和 root2 的根节点比较
+     * 以此类推。
      *
      * @param root1 二叉树
      * @param root2 需要判断的子树
@@ -21,13 +24,19 @@ public class HashSubtree {
      */
     public static boolean hasSubtree(TreeNode root1, TreeNode root2) {
         boolean result = false;
+
+        //当 Tree1 和 Tree2 都不为空的时候，才进行比较。否则直接返回false
         if (root1!=null && root2!=null){
+            //如果找到了对应于 Tree2 的根结点的点。
             if (root1.val==root2.val){
+                //以这个根结点为起点，判断是否包含 Tree2.
                 result = doesTree1HasTree2(root1,root2);
             }
+            //如果没找到，那么用 root1 的左孩子当做起点，去判断是否包含 Tree2
             if (!result){
                 result = hasSubtree(root1.left,root2);
             }
+            //如果还没找到，那么用 root2 的左孩子当做起点，去判断是否包含 Tree2
             if (!result){
                 result = hasSubtree(root1.right,root2);
             }
@@ -36,16 +45,19 @@ public class HashSubtree {
     }
 
     public static boolean doesTree1HasTree2(TreeNode root1,TreeNode root2){
-
+        //如果 Tree2 已经遍历完了，还能对应上，则返回 true
         if (root2==null){
             return true;
         }
+        //如果 Tree2 还没遍历完，但是 Tree1 已经遍历完了，则返回 false
         if (root1==null){
             return false;
         }
+        //如果其中一个点没对上，则返回 false
         if (root1.val!=root2.val){
             return false;
         }
+        //如果根节点对应上了，那么就分别判断子结点是否能对应上
         return doesTree1HasTree2(root1.left,root2.left) && doesTree1HasTree2(root1.right,root2.right);
     }
 
