@@ -1,4 +1,6 @@
-package BinaryTree;
+package BinaryTree.linked;
+
+import BinaryTree.TreeNode;
 
 /**
  * @Author: cuizhe
