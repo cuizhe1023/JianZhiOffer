@@ -160,24 +160,24 @@ public class ClockwisePrintMatrix {
         int bottom = matrix.length - 1;
         while (left<=right && top<=bottom){
             //第一步，从左到右打印
-            for (int i = left; i < right; i++) {
+            for (int i = left; i <= right; i++) {
                 arrayList.add(matrix[top][i]);//列在变化，行不变
             }
             //第二步，从上到下打印
             if (bottom>top){
-                for (int i = top; i < bottom ; i++) {
+                for (int i = top + 1; i <= bottom ; i++) {
                     arrayList.add(matrix[i][right]);
                 }
             }
             //第三步，从右到左打印
             if (left<right && bottom>top){
-                for (int i = right; i > left ; i--) {
+                for (int i = right - 1; i >= left ; i--) {
                     arrayList.add(matrix[bottom][i]);
                 }
             }
             //第四步，从下到上打印
             if (bottom-1>top && right>left){
-                for (int i = bottom; i > top; i--) {
+                for (int i = bottom - 1; i > top; i--) {
                     arrayList.add(matrix[i][left]);
                 }
             }
