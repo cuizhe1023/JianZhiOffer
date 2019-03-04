@@ -27,6 +27,10 @@ public class ArrayBinaryTree {
      * @param array
      */
     public void createTree(Integer array[]) {
+        if (array==null || array.length==0){
+            System.out.println("数组错误！");
+            return ;
+        }
         list = new LinkedList<>();
         for (int i = 0; i < array.length; i++) {
             TreeNode node = new TreeNode(array[i]);
