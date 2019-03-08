@@ -1,5 +1,5 @@
-import List.ListNode;
-import List.MyList;
+import List.singlelinkdelist.ListNode;
+import List.singlelinkdelist.MyList;
 
 /**
  * @Author: cuizhe
