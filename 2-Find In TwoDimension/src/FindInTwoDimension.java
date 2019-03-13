@@ -15,6 +15,7 @@ public class FindInTwoDimension {
 
     /**
      * 比较 low 的方法，遍历找
+     *
      * @param array 二维数组
      * @param number 目标元素
      * @return true/false
@@ -37,6 +38,7 @@ public class FindInTwoDimension {
 
     /**
      * 从右上角开始找，如果比右上角的数大，往下找，比右上角的数小，往左找
+     *
      * @param array 二维数组
      * @param number 目标元素
      * @return true/false
@@ -70,6 +72,7 @@ public class FindInTwoDimension {
 
     /**
      * 从左下角开始找，如果比左下角的数大，往右找，比左下角的数小，往上找
+     *
      * @param array 二维数组
      * @param number 目标元素
      * @return true/false

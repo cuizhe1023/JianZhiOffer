@@ -32,6 +32,7 @@ public class ReversedPrintList {
      * 通过栈实现链表的逆序输出。
      * 每遍历一个结点，将这个结点的 val值 保存在栈中。
      * 之后遍历栈，将栈顶元素依次放入 ArrayList 中。
+     *
      * @param listNode 目标链表
      * @return 数组
      */
@@ -56,6 +57,7 @@ public class ReversedPrintList {
      * 思路2：
      * 通过递归实现链表的逆序输出。
      * 递归到最后一个结点后，将其 val值 依次放入 ArrayList 中。
+     *
      * @param listNode 链表
      * @return
      */

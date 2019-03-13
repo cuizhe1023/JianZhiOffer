@@ -42,9 +42,9 @@ public class MyRandomList {
             while (curNode!=null){
                 if (curNode.next!=null){
                     if (curNode.random==null)
-                        System.out.print(curNode.label+"->");
+                        System.out.print(curNode.label+"→");
                     else {
-                        System.out.print(curNode.label+"("+curNode.random.label+")->");
+                        System.out.print(curNode.label+"("+curNode.random.label+")→");
                     }
                 }else {
                     System.out.print(curNode.label+"]");

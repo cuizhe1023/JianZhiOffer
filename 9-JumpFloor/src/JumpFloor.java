@@ -10,6 +10,7 @@ public class JumpFloor {
      */
     /**
      * 其实就是斐波那契的变种.参考 [8-Fibonacci]
+     *
      * @param target 台阶数
      * @return 跳法
      */

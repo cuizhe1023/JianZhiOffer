@@ -69,6 +69,7 @@ public class PermutationOfString {
      //         c|b|a   c|a|b
 
      //5.最后退出for循环，结束。
+
      * @param str 字符串
      * @return 所有排列
      */

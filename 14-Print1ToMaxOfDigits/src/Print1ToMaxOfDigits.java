@@ -11,6 +11,7 @@ public class Print1ToMaxOfDigits {
     /**
      * 思路：
      * 确定了最大数后，进行遍历输出
+     *
      * @param n n位数
      */
     public static void printToMaxOfDigits_1(int n){

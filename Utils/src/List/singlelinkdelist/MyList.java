@@ -108,7 +108,7 @@ public class MyList {
             System.out.print("[");
             while (curNode != null) {
                 if (curNode.next != null) {
-                    System.out.print(curNode.val + "->");
+                    System.out.print(curNode.val + "→");
                 } else {
                     System.out.println(curNode.val + "]");
                 }

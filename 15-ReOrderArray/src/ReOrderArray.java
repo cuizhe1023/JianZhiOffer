@@ -15,6 +15,7 @@ public class ReOrderArray {
     /**
      * 思路：
      * 开辟新数组，将奇数保存在一个数组中，偶数保存在另一个数组中，之后进行合并。
+     *
      * @param array 整型数组
      */
     public static void reOrderArray_1(int [] array) {
@@ -39,6 +40,7 @@ public class ReOrderArray {
     /**
      * 上面的需要进行新建数组
      * 冒泡排序的一种改进，将奇数逐个“冒”出来。
+     *
      * @param array
      */
     public static void reOrderArray_2(int [] array) {
