@@ -40,27 +40,29 @@ public class ReplaceSpace {
      * 可以从字符串的末尾开始复制和替换，先准备两个指针，indexOld 和 indexNew。
      * indexOld 指向原来字符串的末尾，而 indexNew 指向替换之后的字符串的末尾，
      *                      |W|e| |A|r|e| |H|a|p|p|y|\0| | | | |
-     *                                               ↑      ↑
+     *                                               ↑        ↑
      *                                           indexOld  indexNew
      * 接下来向前移动 indexOld 指针，逐个把它指向的字符复制到 indexNew 所指向的位置，直到碰到第一个空格。
      *                      |W|e| |A|r|e| | | | | |H|a|p|p|y|\0|
-     *                                  ↑      ↑
+     *                                   ↑       ↑
      *                               indexOld  indexNew
      * 碰到第一个空格之后,把 indexOld 向前移动1格，在 indexNew 之前插入字符串“%20”。由于“%20”的长度是3，
      * 因此也要把 indexNew 往前移动3格.
      *                      |W|e| |A|r|e| | |%|2|0|H|a|p|p|y|\0|
-     *                                ↑    ↑
+     *                                 ↑     ↑
      *                            indexOld indexNew
      * 接着复制，直到碰到第二个空格,
      *                      |W|e| | | |A|r|e|%|2|0|H|a|p|p|y|\0|
-     *                          ↑    ↑
+     *                           ↑     ↑
      *                     indexOld indexNew
      * 同上次一样，将“%20”插入在 indexNew 之前.并把 indexNew 往前移动3格
      *                      |W|e|%|2|0|A|r|e|%|2|0|H|a|p|p|y|\0|
-     *                         ↑↑
+     *                         ↑
+     *                         ↑
      *                     indexOld
      *                     indexNew
      * 此时 indexOld 和 indexNew 指向同一个位置，表明所有空格已经替换完毕。
+     *
      * @param str 字符串
      * @return 替换之后的字符串
      */

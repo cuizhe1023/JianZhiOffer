@@ -43,6 +43,7 @@ public class ReConstructBinaryTree {
      *              根节点
      * 有此可以看出以2为根的子树没有右子树。
      * 因此，通过前序遍历找到根节点，再通过中序遍历找到字数的左右子树，就能重新构建一颗二叉树。
+     * 
      * @param pre 前序遍历数组
      * @param in 中序遍历数组
      * @return 头结点
