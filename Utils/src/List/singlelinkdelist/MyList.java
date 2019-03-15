@@ -28,6 +28,18 @@ public class MyList {
         }
     }
 
+    public void insert(ListNode newNode){
+        ListNode curNode = head;
+        if (head==null){
+            head = newNode;
+        }else{
+            while (curNode.next!=null){
+                curNode = curNode.next;
+            }
+            curNode.next = newNode;
+        }
+    }
+
     /**
      * 获取指定位置的结点信息
      * 先判断指定位置合不合法，是否大于链表长度，是否小于1，以及判断链表是否为空；
