@@ -58,6 +58,7 @@ public class LeftRotateString {
         reverse(strChar,start,end);
         //再翻转前 n 个字符串
         reverse(strChar,start,end - n);
+        //翻转 n 后面的字符串
         reverse(strChar,end - n + 1,end);
         return String.valueOf(strChar);
     }
